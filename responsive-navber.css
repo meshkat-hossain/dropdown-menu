@@ -1,0 +1,253 @@
+body{
+    background-color: rgb(231, 190, 190);
+}
+
+.menu{
+    background-color: turquoise;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 20px;
+    padding: 30px;
+
+}
+.menu a{
+   
+    text-decoration: none;
+    color: rgb(236, 227, 227);
+    font-size: 20px;
+    font-style: italic;
+    padding: 20px;
+    background-color: rgb(47, 0, 255);
+    margin-left: 20px;
+    border-radius: 20px;
+}
+.menu a:hover{
+    background-color: rgb(86, 238, 81);
+    
+}
+@media screen and (max-width:600px){
+    .menu {
+       flex-direction: column;
+       align-items: center;
+    }
+    .menu a{
+        background-color: blueviolet;
+        border-radius: 20px;
+        margin: 15px 0;
+        padding: 20px;
+        width: 80%;
+        text-align: center;
+        font-style: normal;
+        color: chartreuse;
+    }
+
+}
+@media screen and (min-width:900px){
+    .menu{
+        background-color: rgb(228, 111, 111);
+    }
+
+}
+*{
+    box-sizing: border-box;
+}
+/* .column{
+    border: 2px solid blueviolet;
+    border-radius: 15px;
+    
+    width: 25%;
+    float: left;
+    padding: 10px;color: cornsilk;
+    background-color: cornflowerblue;
+}
+@media screen and (max-width:992px){
+.column{
+    background-color: cyan;
+    color: darkgreen;
+    width: 50%;
+    float: left;
+    
+}
+}
+@media screen and (max-width:600px){
+    .column{
+        width: 100%;
+        margin-bottom: 10px;
+        background-color: darkkhaki;
+    }
+} */
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.column{
+    flex: 20%;
+    padding: 10px;
+    border: darkmagenta 1px solid;
+    border-radius: 15px;
+    margin: 10px;
+    background-color: orange;
+
+    
+}
+
+
+
+
+@media screen and (max-width:992px){
+    .column{
+        width: 50%;
+
+    }
+}
+@media screen and (max-width:600px){
+    .column{
+        width: 100%;
+        
+    }
+}
+
+/* <!-- Dropdown menu --> */
+.nav-ber{
+    background-color: slateblue;
+    text-align: center;
+    padding: 1% 7%;
+
+}
+.nav-ber a{
+color: snow;
+text-decoration: none;
+cursor: pointer;
+padding: 10px 20px;
+}
+.dropdown-container {
+display: inline;
+position: relative;
+
+}
+.dropdown-content{
+    position: absolute;
+    text-decoration: none;
+    background-color: rgb(123, 255, 0);
+    padding: 10px;
+    top: 30px;
+    right: 0px;
+    text-align: left;
+    display: none;
+    border-radius: 20px;
+    
+
+
+}
+.dropdown-container a{
+font-size: 30px;
+
+
+}
+.dropdown-content a{
+  color: black;
+  display: block;
+  
+  
+}
+
+
+.dropdown-container:hover .dropdown-content{
+    display: block;
+}
+.dropdown-content a:hover{
+    background-color: rgb(135, 190, 222);
+border-radius: 20px;
+}
+
+/* dropdown practice */
+
+.dropdown-menu{
+padding: 0%;
+list-style-type: none;
+
+min-height: 52px;
+
+
+margin: 0 auto;
+}
+.dropdown-menu li{
+float: left;
+border-left: 1px solid #2e2e2e;
+border-right: 1px solid #000;
+position: relative;
+}
+.dropdown-menu li a{
+text-decoration: none;
+background-color: #4e4e4e;
+padding: 15px 20px;
+color: white;
+display: block;
+font-size: 18px;
+text-transform: uppercase;
+}
+.dropdown-menu li a:hover{
+background: orange;
+
+}
+/* Dropdown menu */
+.dropdown-menu li ul {
+list-style-type: none;
+padding: 0%;
+position: absolute;
+left: -99999px;
+}
+.dropdown-menu li ul li {
+float: none;
+border-left: none;
+border-right:none;
+border-top: 2px solid #2e2e2e;
+border-bottom: 2px solid #000;
+width: 200px;
+position: relative;
+}
+.dropdown-menu li:hover ul{
+left: 0%;
+}
+
+/* sub dropdown */
+.dropdown-menu li ul li ul{
+position: absolute;
+top: -99999px;
+}
+.dropdown-menu li ul li:hover ul{
+top: 0%;
+
+}
+
+.dropdown-menu li ul li ul li{
+    left: 200px;
+    border: 1px solid #e29595;
+    background: orange;
+}
+.dropdown-menu li ul li ul li a{
+    background: #eb7a7a;
+}
+@media screen and (max-width:600px) {
+    .dropdown-menu li a{
+        background: #272323;
+        width: 42%;
+       
+        box-sizing: border-box;
+    }
+    .dropdown-menu li{
+        float: none;
+        position: relative;
+     
+    }
+    .dropdown-menu li ul li  {
+        left: 240px;
+        display: block;
+        position: relative;
+        width: 100%;
+        background-color: #272323;
+
+    
+        }
+    }
